@@ -7,46 +7,50 @@ bibliography: [references.bib]
 > ET Jaynes
 
 
-> I would warn you that I do not attribute to nature either beauty or deformity, order or confusion. Only in relation to our imagination can things be called beautiful or ugly, well-ordered or confused
+> I would warn you that I do not attribute to nature either beauty or deformity,
+> order or confusion. Only in relation to our imagination can things be called
+> beautiful or ugly, well-ordered or confused
 >
-> a common misquote attributed to Baruch Spinoza, assembled from
-> translated pieces of Ethics Part I. 
+> a common misquote of
+> Baruch Spinoza, assembled from translated pieces of Ethics Part I.  
 
 
-Species do not have distributions. This may seem a radical claim, given the rise
-of species distribution modeling as both a field of study and imperative for
-ecosystem management over the last several decades. But, species are composed of
-discrete objects---individual organisms that occupy points in space and which
-move through time. The location of every individual organism of a particular
-species at a particular time is an observable value, which we could feasibly
-write down.
+Species do not _actually_ have distributions. This may seem a radical claim,
+given the rise of species distribution modeling as both a field of study and
+imperative for ecosystem management over the last several decades. But, species
+are composed of discrete objects---individual organisms that occupy points in
+space and which move through time. The location of every individual organism of
+a particular species at a particular time is an observable value, which we could
+feasibly write down.
 
 A species distribution is not some inherent property of nature that belongs to a
 species, but a conceptual framework that we invoke because we know that our
 sample of observed individuals is incomplete, and in many contexts these
-individuals will continue to move post-observation. The goal of an species
-distribution model (SDM) instead to takes a set of coordinates of observed
+individuals will continue to move post-observation. The goal of a species
+distribution model (SDM) is instead to take a set of coordinates of observed
 occurrence of a species $\mathbf{O} = \{\vec{o}_1, \vec{o}_2, \dots\}$ and to
-best describe a distribution $D$ such that  the true coordinates, denoted
-$\mathbf{X} = \{\vec{x}_1, \vec{x}_2, \dots\}$ are likely to have been drawn
-from this distribution. Note that typically $|O| \ll |X|$, as is the reason we
-don't try to measure the location every individual in the first place (that
-being said, for charismatic megafauna that are nearly extinct, this _is_ what we
-do, precisely because it is feasible).
+best describe a distribution $D$ such that the true coordinates of the
+individuals of that species, denoted $\mathbf{X} = \{\vec{x}_1, \vec{x}_2,
+\dots\}$ are likely to have been drawn from this distribution $D$. Note that
+typically $|O| \ll |X|$, as is the reason we don't try to measure the location
+every individual in the first place (that being said, for charismatic megafauna
+that are nearly extinct, this _is_ what we do, precisely because it is
+feasible).
 
 Many approaches have been taken to design SDMs, but almost universally the
-output of an SDM is a probability of occurrence, denoted $p(\vec{x}_i)$,
-associated with each location $\vec{x}_i$ in space. This forms a distribution as
-$\sum_{x_i} p(x_i) = 1$. This is often referred to in plain
-language as "occurrence probability". But what is meant by this value $p$? Is it
-the probability conditional on observing an individual that it will be observed
-at that location? Or is it the probability that an observer would find an
-individual of this species at location if they "look"?
+output of an SDM is a raster of cells, where the value of cell $i$ is denoted
+$p_i$. This forms a distribution as $\sum_{i} p(i) = 1$. The value of a cell is
+often referred to in plain language as "occurrence probability". But what is
+meant by this value $p$? Is it the probability conditional on observing an
+individual that it will be observed at that location? Or is it the probability
+that an observer would find an individual of this species at location if they
+"look hard enough"?
 
 This semantic confusion is a by-product of using a distribution as a tool to
 model something that is discrete --- the finite number of individuals of a
-species that exist in space --- and approximate it as continuous, effectively as
-if there were infinitely many individuals of that species. Regardless of the
+species that exist in space --- and approximate it as continuous.
+
+This is effectively treating a species as if there many individuals across space. Regardless of the
 paradigm used to design the statistical model that associates occurrences with
 probabilities as a function of environmental conditions, this is fundamentally a
 _frequentist_ view of probability! A more appropriate way to view this would be
