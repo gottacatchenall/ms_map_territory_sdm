@@ -53,14 +53,14 @@ This semantic confusion is a by-product of using a distribution as a tool to
 model something that is discrete --- the finite number of individuals of a
 species that exist in space --- and approximate it as continuous.
 
-This is effectively treating a species as if there many individuals across
-space. Regardless of the paradigm used to design the statistical model that
-associates occurrences with probabilities as a function of environmental
-conditions, this is fundamentally a _frequentist_ view of probability! A more
-appropriate way to view this would be the probability you observe an individual
-at a location $\vec{x}$ as conditional on there being $N$ total individuals of a
-given species across the entire spatial domain,  $p = P(\vec{x} | N)$--- we
-illustrate this using a "sandbox" SDM in the next section.
+Regardless of the paradigm used to design the statistical model that associates
+occurrences with probabilities as a function of environmental conditions,
+denoting the probability of observing a species $P(A_{xy})$ is fundamentally a
+_frequentist_ view of probability. A
+more appropriate way to view this would be the probability you observe an
+individual at a location $\vec{x}$ as conditional on there being $N$ total
+individuals of a given species across the entire spatial domain,  $p = P(\vec{x}
+| N)$--- we illustrate this using a "sandbox" SDM in the next section.
 
 Jaynes on the mind-projection fallacy:
 
