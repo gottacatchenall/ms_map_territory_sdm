@@ -11,7 +11,7 @@ bibliography: [references.bib]
 order or confusion. Only in relation to our imagination can things be called
 beautiful or ugly, well-ordered or confused.
 >
-> Spinoza
+> Baruch Spinoza
 
 
 Species do not have distributions. This may seem a radical claim, given the rise
