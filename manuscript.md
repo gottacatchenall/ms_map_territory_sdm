@@ -11,8 +11,8 @@ bibliography: [references.bib]
 > order or confusion. Only in relation to our imagination can things be called
 > beautiful or ugly, well-ordered or confused
 >
-> a common misquote of
-> Baruch Spinoza, assembled from translated pieces of Ethics Part I.  
+> a common misquote of _Baruch Spinoza_, assembled from translated parts
+> of his _Ethics (Part I)_  
 
 
 Species do not _actually_ have distributions. This may seem a radical claim,
@@ -85,7 +85,17 @@ predict  where one might observe a species.
 
 You will find this everywhere in the history of science. Quantum mechanics has
 an object that much like a species distribution model: the wave function $\psi$
-describing the probability of observing a particle across space. Much like SDMs,
+describing the probability of observing a particle across space.
+
+A misinterpretation of the wave function, as Jaynes says, is that it describes
+some inherent property of nature rather than being a construct of human
+imagination to make predictions based on the information we can observe. The
+story of Schrodinger's cat is often presented through the lens that the cat is
+somehow _both_ alive and dead at the same time. This is a quintessential of the
+mind-projection fallacy as described above. The state of the external world
+cannot be assumed indeterminate for the sole reason that  we lack the
+information to fully describe it.
+
 this object caused people to get caught up the idea that "probability" is a
 fixed property of nature rather than an abstraction used describe what we can
 say about a system given a set of information.
