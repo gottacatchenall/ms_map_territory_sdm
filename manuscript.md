@@ -10,7 +10,7 @@ bibliography: [references.bib]
 Species do not have distributions. This may seem a radical claim, given the rise
 of species distribution modeling as both a field of study and imperative for
 ecosystem management over the last several decades. But, species are composed of
-discrete objects, individual organisms, which occupy points in space and move
+discrete objects---individual organisms that occupy points in space and which move
 through time. The location of each individual organism of a particular species
 is an observable value, which we could feasibly write down.
 
@@ -44,7 +44,9 @@ paradigm used to design the statistical model that associates occurences with
 probabilities as a function of environmental conditions, this is fundamentally a
 _frequentist_ view of probability! A more appropriate way to view this would be
 the probability you observe an individual at a location $\vec{x}$ as conditional
-on there being $N$ total individuals of a given species,  $p = P(\vec{x} | N)$.
+on there being $N$ total individuals of a given species across the entire spatial
+domain,  $p = P(\vec{x} | N)$--- we illustrate this using a "sandbox" SDM in
+the next section.
 
 
 ##  sandbox sdm across different abundances
