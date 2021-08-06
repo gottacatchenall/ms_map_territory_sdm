@@ -22,7 +22,7 @@ Species do not _actually_ have distributions. This may seem a radical claim,
 given the rise of species distribution modeling as both a field of study and
 imperative for ecosystem management over the last several decades. But, species
 are composed of discrete objects---individual organisms that occupy points in
-space and which move through time. The location of every individual organism of
+space that move through time. The location of every individual organism of
 a particular species at a particular time is an observable value, which we could
 feasibly write down.
 
