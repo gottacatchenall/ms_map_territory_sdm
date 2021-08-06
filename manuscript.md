@@ -92,7 +92,8 @@ realized value. But we cannot sample this entire thing, so we take a subset of
 it and aim to estimate the this latent "species distribution" in order to
 predict  where one might observe a species.
 
-You will find this everywhere in the history of science. Quantum mechanics has
+You will find this everywhere in the history of science. To develop on
+an example raised by Jaynes---quantum mechanics has
 an object that much like a species distribution model: the wave function $\psi$
 describing the probability of observing a particle across space.
 
