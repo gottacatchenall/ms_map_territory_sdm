@@ -73,7 +73,8 @@ Jaynes on the mind-projection fallacy:
 >  "Gaussian random variables", or "stochastic processes", or "stationary
 >  time-series", or "disorder", as if the property of being Gaussian, random,
 >  stochastic, stationary, or disorderly is a real property, like the property
->  of possessing mass or length, existing in Nature... > As soon as the error
+>  of possessing mass or length, existing in Nature...
+> As soon as the error
 >  had a definite name and description, it was much easier to recognize. Once
 >  one has grasped the idea, one sees the Mind Projection Fallacy everywhere;
 >  what we have been taught as deep wisdom, is stripped of its pretensions and
