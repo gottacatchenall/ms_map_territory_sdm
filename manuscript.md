@@ -22,12 +22,11 @@ Species do not _actually_ have distributions. This may seem a radical claim,
 given the rise of species distribution modeling as both a field of study and
 imperative for ecosystem management over the last several decades. But, species
 are composed of discrete objects---individual organisms that occupy points in
-space that move through time. The location of every individual organism of
-a particular species at a particular time is an observable value, which we could
-feasibly write down.
-
-Yet in most cases the number of individuals of a species becomes large enough
-that it is not practical to observe the location of individuals across time.
+space that move through time. The location of every individual organism of a
+particular species at a particular time is an observable value, which we could
+feasibly write down. In most cases the number of individuals of a species
+becomes large enough that it is no longer practical to observe the location of
+every individual across time.
 
 
 A species distribution is not some inherent property of nature that belongs to a
@@ -104,9 +103,9 @@ cannot be assumed indeterminate for the sole reason that we lack the
 information to fully describe it.
 
 
-Is "probability" is a
-fixed property of nature rather than an abstraction used describe what we can
-say about a system given a set of information.
+Is "probability" is a fixed property of nature rather than an abstraction used
+describe what we can say about a system given a set of information? me,
+personally, i don't know.
 
 # An illustration
 
