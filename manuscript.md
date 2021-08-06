@@ -26,6 +26,10 @@ space that move through time. The location of every individual organism of
 a particular species at a particular time is an observable value, which we could
 feasibly write down.
 
+Yet in most cases the number of individuals of a species becomes large enough
+that it is not practical to observe the location of individuals across time.
+
+
 A species distribution is not some inherent property of nature that belongs to a
 species, but a conceptual framework that we invoke because we know that our
 sample of observed individuals is incomplete, and in many contexts these
@@ -51,16 +55,17 @@ that an observer would find an individual of this species at location if they
 
 This semantic confusion is a by-product of using a distribution as a tool to
 model something that is discrete --- the finite number of individuals of a
-species that exist in space --- and approximate it as continuous.
+species that exist across space. Why do we end up doing this? We cannot describe
+the position of a species across time with a deterministic function.
 
 Regardless of the paradigm used to design the statistical model that associates
 occurrences with probabilities as a function of environmental conditions,
 denoting the probability of observing a species $P(A_{xy})$ is fundamentally a
-_frequentist_ view of probability. A
-more appropriate way to view this would be the probability you observe an
-individual at a location $\vec{x}$ as conditional on there being $N$ total
-individuals of a given species across the entire spatial domain,  $p = P(\vec{x}
-| N)$--- we illustrate this using a "sandbox" SDM in the next section.
+_frequentist_ view of probability. A more appropriate way to view this would be
+the probability you observe an individual at a location $\vec{x}$ as conditional
+on there being $N$ total individuals of a given species across the entire
+spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a "sandbox"
+SDM in the next section.
 
 Jaynes on the mind-projection fallacy:
 
