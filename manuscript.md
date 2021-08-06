@@ -7,9 +7,9 @@ bibliography: [references.bib]
 > ET Jaynes, _Probability theory as logic_
 
 
-A species distribution is not a property of nature. Species (controversies about precise definition aside) are composed of
-discrete objects, individual organisms, which occupy points in space
-and move through time.
+A species distribution is not a property of nature. Species (controversies about
+precise definition aside) are composed of discrete objects, individual
+organisms, which occupy points in space and move through time.
 
 A species distribution model (SDM) is a model which typically assigns a
 probability $p$ to each coordinate$\vec{x}_i$ in space. But what is meant by
