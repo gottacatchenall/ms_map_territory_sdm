@@ -11,7 +11,7 @@ A species distribution is not a property of nature. Species are composed of
 discrete objects, individuals, which occupy points in space.
 
 A species distribution model (SDM) is a model which typically assigns a probability $p$ to each coordinate$\vec{x}_i$ in space.
-But what is meant by this value $p$?---typically this is interpreted as the
+But what is meant by this value $p$? This is interpreted as the
 probability that a given individual of the species will be observed there. But
 by assuming a distribution, we take something that is discrete --- the finite
 number of individuals of a species that exist in space --- and approximate it as
