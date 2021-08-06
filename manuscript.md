@@ -47,10 +47,6 @@ _frequentist_ view of probability! A more appropriate way to view this would be
 the probability you observe an individual at a location $\vec{x}$ as conditional
 on there being $N$ total individuals of a given species across the entire
 spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a "sandbox"
-SDM in the next section.more appropriate way to view this would be
-the probability you observe an individual at a location $\vec{x}$ as conditional
-on there being $N$ total individuals of a given species across the entire
-spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a "sandbox"
 SDM in the next section.
 
 Jaynes on the mind-projection fallacy:
