@@ -7,11 +7,10 @@ bibliography: [references.bib]
 > ET Jaynes
 
 
-> I would warn you that I do not attribute to nature either beauty or deformity,
-order or confusion. Only in relation to our imagination can things be called
-beautiful or ugly, well-ordered or confused.
+> I would warn you that I do not attribute to nature either beauty or deformity, order or confusion. Only in relation to our imagination can things be called beautiful or ugly, well-ordered or confused
 >
-> Baruch Spinoza
+> a common misquote attributed to Baruch Spinoza, assembled from
+> translated pieces of Ethics Part I. 
 
 
 Species do not have distributions. This may seem a radical claim, given the rise
