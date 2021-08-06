@@ -4,7 +4,14 @@ bibliography: [references.bib]
 
 > Nature does not prepare distributions, only states
 >
-> ET Jaynes, _Probability theory as logic_
+> ET Jaynes
+
+
+> I would warn you that I do not attribute to nature either beauty or deformity,
+order or confusion. Only in relation to our imagination can things be called
+beautiful or ugly, well-ordered or confused.
+>
+> Spinoza
 
 
 Species do not have distributions. This may seem a radical claim, given the rise
@@ -78,13 +85,15 @@ Dare I say it, but this section may contain multiple integrals.
 In practice, an SDM is described by an $n$x$m$ raster where the value of the
 raster at an index $(x,y)$ is here denoted $A_{xy}$.
 
-The goal in this section is to construct a figure where the x-axis
-is species abundance $N$, and the y-axis is the probability that $N$ observations of this species
-all occur in cells of the raster with a probability-value $A_{xy}$ that is greater than some threshold $\rho$.
-
+The goal in this section is to construct a figure where the x-axis is species
+abundance $N$, and the y-axis is the probability that $N$ observations of this
+species all occur in cells of the raster with a probability-value $A_{xy}$ that
+is greater than some threshold $\rho$.
 
 What is the probability that for a given observation of an individual, that this
 observation occurs in a cell with a value above some threshold $\rho$?
+
+$P(A_{xy} > \rho)$
 
 
 
