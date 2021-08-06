@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root {
+    --citation: #4F7294;
+    --structure: #31679c;
+
+    --light: #474747;
+    --pale: #a5a5a5;
+    --grey: #e0e0e0;
+    --nav: #fdfdfd;
+
+    --width: 650px;
+    --inner-space: 1.2em;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+article > p {
+    line-height: 1.5em;
+    padding: 10px 0px;
+    font-size: 1.1em;
+    margin: 0px auto;
+}
+article > h1 {
+    padding-top: 2.5em;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid var(--structure);
+}
+a:hover {
+    font-weight: 500;
+}
+.citation {
+    color: var(--citation);
+}
+.container {
+    margin: 0em auto;
+    padding: var(--inner-space);
+}
+header > .container {
+    margin-top: 4em;
+}
+code, pre {
+    font-family: "Roboto Mono", monospace;
+}
+pre {
+    white-space: pre-wrap;
+}
+
+.header--title {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+.header--authors > span {
+    color: var(--light);
+    font-weight: 400;
+}
+main {
+    padding-bottom: 8em !important;
+}
+footer {
+    background-color: var(--grey);
+    font-weight: 300;
+}
+
+
+
+/* max width stuff here */
+.abstract {
+    color: var(--light);
+    margin: 0em auto;
+    font-size: 0.8em;
+    max-width: 700px;
+}
+.abstract p{
+    max-width: 500px;
+}
+figure {
+    max-width: 1200px;
+    border: 1px solid var(--pale);
+    border-radius: 2px;
+    margin: 30px auto;
+}
+header {
+    font-family: "Roboto", sans-serif;
+    z-index: 5;
+    color: black;
+    margin: 4rem auto 0rem auto;
+    max-width: 700px;
+}
+article p{
+    max-width: 700px;
+}
+h1, h2, h3 {
+    margin: 10px auto;
+    color: var(--structure);
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    max-width: 700px;
+}
+blockquote {
+    font-style: italic;
+    padding: 3px 0px 3px 30px;
+    border-left: 3px solid #404040;
+    margin: 25px auto;
+    font-size: 0.85em;
+    max-width: 500px;
+}
+#refs {
+    font-size: 90%;
+    column-count: 2;
+    max-width: 700px;
+    margin: 0px auto;
+}
+#refs > .csl-entry {
+    padding-bottom: 0.2em;
+    padding-top: 0.4em;
+    max-width: 500px;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0em auto;
+}
+figure > figcaption {
+    padding: var(--inner-space);
+}
+table {
+    width: 100%;
+    min-width: 100%;
+    border-collapse: collapse;
+}
+table > caption {
+    padding: var(--inner-space);
+}
+figcaption, caption {
+    color: var(--light);
+    font-weight: 300;
+}
+thead {
+    color: var(--structure);
+}
+td, th {
+    padding: 3px;
+}
+tr {
+    border-top: 1px solid var(--structure);
+    border-bottom: 1px solid var(--structure);
+}
+tbody > tr:nth-child(even) {background: var(--grey)};
+tbody {
+    border-bottom: 1px solid var(--structure);
+}
+
+
+.hanging-indent > .csl-entry {
+    padding-left: 50px ;
+    text-indent: -45px ;
+}
+
+
+h1 {
+    font-size: 2.3em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 400;
+}
+h3 {
+    font-size: 1.8em;
+}
+h4 {
+    font-size: 1.5em;
+}
