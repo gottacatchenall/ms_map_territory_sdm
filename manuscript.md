@@ -42,7 +42,7 @@ $E(\mathbf{O}) = \{\vec{e}_1 \}$  to probability of occurrence.
 
 Jaynes on the mind-projection fallacy. You will find this everywhere in the
 history of science. Quantum mechanics has an object that much like a species
-distribution model: the wave function $\phi$ describing the probability of
+distribution model: the wave function $\psi$ describing the probability of
 observing a particle across space. Much like SDMs, this object caused people to
 get caught up the idea that "probability" is a fixed property of nature rather
 than an abstraction used describe what we can say about a system given a set of
