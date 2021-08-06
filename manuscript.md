@@ -71,14 +71,31 @@ this object caused people to get caught up the idea that "probability" is a
 fixed property of nature rather than an abstraction used describe what we can
 say about a system given a set of information.
 
+# An illustration
 
-##  sandbox sdm across different abundances
+Dare I say it, but this section may contain multiple integrals.
+
+In practice, an SDM is described by an $n$x$m$ raster where the value of the
+raster at an index $(x,y)$ is here denoted $A_{xy}$.
+
+The goal in this section is to construct a figure where the x-axis
+is species abundance $N$, and the y-axis is the probability that $N$ observations of this species
+all occur in cells of the raster with a probability-value $A_{xy}$ that is greater than some threshold $\rho$.
+
+
+What is the probability that for a given observation of an individual, that this
+observation occurs in a cell with a value above some threshold $\rho$?
+
+
 
 **Figure 1**: sandbox sdm. Simulate probability of occurrence in region with
 $p_min$. X-axis is true abundance, y-axis is probability that an individual will
 be observed in the $p_min$ region of the SDM in $G$ generations, where the
 realized locations of the $N$ individuals in generation $g$ is drawn from the
 sandbox SDM.
+
+
+
 
 
 # References
