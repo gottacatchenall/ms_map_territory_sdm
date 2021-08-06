@@ -51,10 +51,9 @@ often referred to in plain language as "occurrence probability". But what is
 meant by this value $p$? Is it the probability conditional on observing an
 individual that it will be observed at that location? Or is it the probability
 that an observer would find an individual of this species at location if they
-"look hard enough"?
-This semantic confusion is a by-product of using a distribution as a tool to
-model something that is discrete --- the finite number of individuals of a
-species that exist across space.
+"look hard enough"? This semantic confusion is a by-product of using a
+distribution as a tool to model something that is discrete --- the finite number
+of individuals of a species that exist across space.
 
 Regardless of the paradigm used to design the statistical model that associates
 occurrences with probabilities as a function of environmental conditions,
@@ -90,21 +89,22 @@ realized value. But we cannot sample this entire thing, so we take a subset of
 it and aim to estimate the this latent "species distribution" in order to
 predict  where one might observe a species.
 
-You will find this everywhere in the history of science. To develop on
-an example raised by Jaynes---quantum mechanics has
-an object that much like a species distribution model: the wave function $\psi$
-describing the probability of observing a particle across space.
-
-A misinterpretation of the wave function, as Jaynes says, is that it describes
-some inherent property of nature (rather than being a construct of human
-imagination) to make predictions based on the information we can observe. The
-story of Schrodinger's cat is often presented through the lens that the cat is
-somehow _both_ alive and dead at the same time. This is a quintessential of the
+This pattern is common in the history of science. To develop on an example
+raised by Jaynes---quantum mechanics has an object that much like a species
+distribution model: the wave function $\psi$ describing the probability of
+observing a particle across space. A misinterpretation of the wave function,
+according to Jaynes, is that often one assumes that the distribution of where
+observers see a particle is an inherent property of that particle, rather than
+being a construct of human imagination created to make predictions based on the
+information we have previously obsserved about that particle. The story of
+Schrodinger's cat is often presented through the lens that the cat is somehow
+_both_ alive and dead at the same time--- a quintessential of the
 mind-projection fallacy as described above. The state of the external world
-cannot be assumed indeterminate for the sole reason that  we lack the
+cannot be assumed indeterminate for the sole reason that we lack the
 information to fully describe it.
 
-this object caused people to get caught up the idea that "probability" is a
+
+Is "probability" is a
 fixed property of nature rather than an abstraction used describe what we can
 say about a system given a set of information.
 
