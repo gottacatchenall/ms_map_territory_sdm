@@ -30,10 +30,11 @@ every individual across time.
 
 
 A species distribution is not some inherent property of nature that belongs to a
-species, but a conceptual framework that we invoke because we know that our
-sample of observed individuals is incomplete, and in many contexts these
-individuals will continue to move across space after they are observed. The goal
-of a species distribution model (SDM) is instead to take a set of coordinates of
+species, but a conceptual framework that we invoke because we know that any
+observation of any species is incomplete, and often in most context these
+observations of individual location at a particular time will change in unknown
+ways as individuals move across space after they are observed. The goal of a
+species distribution model (SDM) is instead to take a set of coordinates of
 observed occurrence of a species $\mathbf{O} = \{\vec{o}_1, \vec{o}_2, \dots\}$
 and to best describe a distribution $D$ such that the true coordinates of the
 individuals of that species, denoted $\mathbf{X} = \{\vec{x}_1, \vec{x}_2,
