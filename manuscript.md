@@ -97,8 +97,8 @@ an object that much like a species distribution model: the wave function $\psi$
 describing the probability of observing a particle across space.
 
 A misinterpretation of the wave function, as Jaynes says, is that it describes
-some inherent property of nature rather than being a construct of human
-imagination to make predictions based on the information we can observe. The
+some inherent property of nature (rather than being a construct of human
+imagination) to make predictions based on the information we can observe. The
 story of Schrodinger's cat is often presented through the lens that the cat is
 somehow _both_ alive and dead at the same time. This is a quintessential of the
 mind-projection fallacy as described above. The state of the external world
