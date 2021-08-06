@@ -52,11 +52,9 @@ meant by this value $p$? Is it the probability conditional on observing an
 individual that it will be observed at that location? Or is it the probability
 that an observer would find an individual of this species at location if they
 "look hard enough"?
-
 This semantic confusion is a by-product of using a distribution as a tool to
 model something that is discrete --- the finite number of individuals of a
-species that exist across space. Why do we end up doing this? We cannot describe
-the position of a species across time with a deterministic function.
+species that exist across space.
 
 Regardless of the paradigm used to design the statistical model that associates
 occurrences with probabilities as a function of environmental conditions,
