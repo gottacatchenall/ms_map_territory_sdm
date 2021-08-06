@@ -50,29 +50,38 @@ This semantic confusion is a by-product of using a distribution as a tool to
 model something that is discrete --- the finite number of individuals of a
 species that exist in space --- and approximate it as continuous.
 
-This is effectively treating a species as if there many individuals across space. Regardless of the
-paradigm used to design the statistical model that associates occurrences with
-probabilities as a function of environmental conditions, this is fundamentally a
-_frequentist_ view of probability! A more appropriate way to view this would be
-the probability you observe an individual at a location $\vec{x}$ as conditional
-on there being $N$ total individuals of a given species across the entire
-spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a "sandbox"
-SDM in the next section.
+This is effectively treating a species as if there many individuals across
+space. Regardless of the paradigm used to design the statistical model that
+associates occurrences with probabilities as a function of environmental
+conditions, this is fundamentally a _frequentist_ view of probability! A more
+appropriate way to view this would be the probability you observe an individual
+at a location $\vec{x}$ as conditional on there being $N$ total individuals of a
+given species across the entire spatial domain,  $p = P(\vec{x} | N)$--- we
+illustrate this using a "sandbox" SDM in the next section.
 
 Jaynes on the mind-projection fallacy:
 
->  In studying probability theory, it was vaguely troubling to see reference to "Gaussian
-random variables", or "stochastic processes", or "stationary time-series", or "disorder", as if the
-property of being Gaussian, random, stochastic, stationary, or disorderly is a real property, like the
-property of possessing mass or length, existing in Nature...
-> As soon as the error had a definite name and description, it was much easier to recognize.
-Once one has grasped the idea, one sees the Mind Projection Fallacy everywhere; what we have
-been taught as deep wisdom, is stripped of its pretensions and seen to be instead a foolish non
-sequitur. The error occurs in two complementary forms, which we might indicate thus:
+>  In studying probability theory, it was vaguely troubling to see reference to
+>  "Gaussian random variables", or "stochastic processes", or "stationary
+>  time-series", or "disorder", as if the property of being Gaussian, random,
+>  stochastic, stationary, or disorderly is a real property, like the property
+>  of possessing mass or length, existing in Nature... > As soon as the error
+>  had a definite name and description, it was much easier to recognize. Once
+>  one has grasped the idea, one sees the Mind Projection Fallacy everywhere;
+>  what we have been taught as deep wisdom, is stripped of its pretensions and
+>  seen to be instead a foolish non sequitur. The error occurs in two
+>  complementary forms, which we might indicate thus:
 >
 > A): My own imagination -> Real property of Nature
 >
 > B): My own ignorance -> Nature is indeterminate
+
+"Our own ignorance implies nature is indeterminate". This is why we build SDMs.
+Clearly the locations of the individuals of a species at any point in time is a
+measurable property of the world for which there cannot be more than one
+realized value. But we cannot sample this entire thing, so we take a subset of
+it and aim to estimate the this latent "species distribution" in order to
+predict  where one might observe a species.
 
 You will find this everywhere in the history of science. Quantum mechanics has
 an object that much like a species distribution model: the wave function $\psi$
