@@ -2,7 +2,7 @@
 bibliography: [references.bib]
 ---
 
-> Nature does not prepare distributions, only states
+> Nature does not prepare distributions, only states.
 >
 > ET Jaynes
 
@@ -15,6 +15,9 @@ bibliography: [references.bib]
 > of his _Ethics (Part I)_  
 
 
+***fundamental takeaway***: species distributions must be considered as a function
+of the abundance of that species
+
 Species do not _actually_ have distributions. This may seem a radical claim,
 given the rise of species distribution modeling as both a field of study and
 imperative for ecosystem management over the last several decades. But, species
@@ -26,10 +29,10 @@ feasibly write down.
 A species distribution is not some inherent property of nature that belongs to a
 species, but a conceptual framework that we invoke because we know that our
 sample of observed individuals is incomplete, and in many contexts these
-individuals will continue to move post-observation. The goal of a species
-distribution model (SDM) is instead to take a set of coordinates of observed
-occurrence of a species $\mathbf{O} = \{\vec{o}_1, \vec{o}_2, \dots\}$ and to
-best describe a distribution $D$ such that the true coordinates of the
+individuals will continue to move across space after they are observed. The goal
+of a species distribution model (SDM) is instead to take a set of coordinates of
+observed occurrence of a species $\mathbf{O} = \{\vec{o}_1, \vec{o}_2, \dots\}$
+and to best describe a distribution $D$ such that the true coordinates of the
 individuals of that species, denoted $\mathbf{X} = \{\vec{x}_1, \vec{x}_2,
 \dots\}$ are likely to have been drawn from this distribution $D$. Note that
 typically $|O| \ll |X|$, as is the reason we don't try to measure the location
