@@ -17,56 +17,55 @@ bibliography: [references.bib]
 
 Species do not _actually_ have distributions. This may seem a radical claim,
 given the rise of species distribution modeling as both a field of study and
-imperative for ecosystem management over the last several decades. But, species
-are composed of discrete objects---individual organisms that occupy points in
-space that move through time. The location of every individual organism of a
-particular species at a particular time is an observable value, which we could
-feasibly write down. In most cases the number of individuals of a species
-becomes large enough that it is no longer practical to observe the location of
-every individual across time.
+imperative for ecosystem management over the last several decades. But consider
+that species are composed of discrete objects---individual organisms that occupy
+points in space and which move through time. The location of every individual
+organism of a particular species at a particular time is an observable value,
+which we could feasibly write down. In most cases the number of individuals of a
+species becomes large enough that this is no longer practical.
 
-
-A species distribution is not some inherent property of nature that belongs to a
-species, but a conceptual framework that we invoke because we know that any
-observation of any species is incomplete, and often in most context these
-observations of individual location at a particular time will change in unknown
-ways as individuals move across space after they are observed. The goal of a
-species distribution model (SDM) is instead to take a set of coordinates of
-observed occurrence of a species $\mathbf{O} = \{\vec{o}_1, \vec{o}_2, \dots\}$
-and to best describe a distribution $D$ such that the true coordinates of the
-individuals of that species, denoted $\mathbf{X} = \{\vec{x}_1, \vec{x}_2,
-\dots\}$ are likely to have been drawn from this distribution $D$. Note that
-typically $|O| \ll |X|$, as is the reason we don't try to measure the location
-every individual in the first place (that being said, for charismatic megafauna
-that are nearly extinct, this _is_ what we do, precisely because it is
-feasible).
+A species distribution is not some inherent property of a given species, but a
+conceptual framework that we invoke because we know that sampling of species
+locations is incomplete, and in most contexts these location of the individuals
+observed in this sample will change as species move after they are observed. The
+goal of a species distribution model (SDM) is instead to take a set of
+coordinates of observed occurrence of a species $\mathbf{O} = \{\vec{o}_1,
+\vec{o}_2, \dots\}$ and to best describe a distribution $D$ such that the true
+coordinates of the individuals of that species, denoted $\mathbf{X} =
+\{\vec{x}_1, \vec{x}_2, \dots\}$ are likely to have been drawn from this
+distribution $D$. Note that typically $|O| \ll |X|$, as is the reason we don't
+try to measure the location every individual in the first place (that being
+said, for charismatic megafauna that are nearly extinct, this _is_ what we do,
+precisely because it is feasible). Yet this should not be mistaken for the
+distribution $D$ being a latent property of species.
 
 Many approaches have been taken to design SDMs, but almost universally the
-output of an SDM is a raster of cells, where the value of cell $i$ is denoted
-$p_i$. This forms a distribution as $\sum_{i} p(i) = 1$. The value of a cell is
-often referred to in plain language as "occurrence probability". But what is
-meant by this value $p$? Is it the probability conditional on observing an
-individual that it will be observed at that location? Or is it the probability
-that an observer would find an individual of this species at location if they
-"look hard enough"? This semantic confusion is a by-product of using a
-distribution as a tool to model something that is discrete --- the finite number
-of individuals of a species that exist across space.
+output of an SDM is a raster, where the value of each location/cell $i$, denoted
+$p_i$, forms a distribution as $\sum_{i} p(i) = 1$. The value of a cell is often
+referred to in plain language as "occurrence probability". But what is meant by
+this?---is it the probability conditional on observing an individual that it
+will be observed at that location? Or is it the probability that an observer
+would find an individual of this species at location if they "look hard enough"?
 
-Regardless of the paradigm used to design the statistical model that associates
-occurrences with probabilities as a function of environmental conditions,
-framing the probability of observing a species $P(\vec{x}_i)$  as "probability of occurrence" is fundamentally a
-_frequentist_ view of probability. A more appropriate way to view this would be
-the probability you observe an individual at a location $\vec{x}$ as conditional
-on there being $N$ total individuals of a given species across the entire
-spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a "sandbox"
-SDM in the next section.
+This semantic confusion is a by-product of using a distribution as a tool to
+model something that is discrete --- the finite number of individuals of a
+species that exist across space. Regardless of the paradigm used to design the
+model predicting occurrence probability, the framing of _occurrence probability_
+as existing per unit space is fundamentally a _frequentist_ view of probability,
+as this does not consider that a finite number of samples from this spatial
+distribution are unlikely to produce . A more appropriate way to view this would
+be the probability you observe an individual at a location $\vec{x}$ as
+conditional on there being $N$ total individuals of a given species across the
+entire spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a
+"sandbox" SDM in the next section.
 
 
 # An illustration
 
 
-The goal in this section is to construct a figure where the x-axis is species
-abundance $N$, and the y-axis is the probability that $N$ observations of this
+The goal in this section is to determine how the abundance of a species is $N$
+effects the meaning of the occurrence probability
+
 species all occur in cells of the raster with a probability-value $A_{xy}$ that
 is greater than some threshold. Dare I say it, but this section may
 contain multiple integrals.
@@ -156,12 +155,15 @@ observing a particle across space. A misinterpretation of the wave function,
 according to Jaynes, is that often one assumes that the distribution of where
 observers see a particle is an inherent property of that particle, rather than
 being a construct of human imagination created to make predictions based on the
-information we have previously obsserved about that particle. The story of
-Schrodinger's cat is often presented through the lens that the cat is somehow
-_both_ alive and dead at the same time--- a quintessential of the
+information we have observed about that particle. The most (in)famous example of
+this is likely Schrodinger's cat: often presented as the lens that the cat is
+somehow _both_ alive and dead at the same time--- a quintessential of the
 mind-projection fallacy as described above. The state of the external world
 cannot be assumed indeterminate for the sole reason that we lack the information
-to fully describe it.
+to fully describe it. This is equivalent to saying if one is in New York, then
+for oneself London becomes a multiverse of the possible worlds which are only
+realized upon one's return.
+
 
 Is "probability" is a fixed property of nature rather than an abstraction used
 describe what we can say about a system given a set of information? me,
