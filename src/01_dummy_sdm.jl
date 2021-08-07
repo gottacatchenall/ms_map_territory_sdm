@@ -69,13 +69,13 @@ using ColorSchemes
 
 function makeplot(ϵ; cs=ColorSchemes.Paired_5)
 
-    plt = plot(title="ϵ = $ϵ", xlims=(1,10^4),ylims=(0,1), legend=:none, dpi=300, frame=:box)
+    plt = plot(title="ϵ = $ϵ", xlims=(1,10^4),ylims=(0,1), legendtitle="λ", dpi=300, frame=:box)
 
     styl = (ms=5, msw=1.5, mc=:white, lw=1.5)
     for (i,λ) in  enumerate([0.5, 1, 3, 5])
         Ns, probs = buildscatter(ϵ,λ)
-        plot!(plt, Ns, probs, lc = cs[i]; styl...)
-        scatter!(plt, Ns, probs, msc=cs[i]; styl...)
+        plot!(plt, Ns, probs, lc = cs[i], label=""; styl...)
+        scatter!(plt, Ns, probs, msc=cs[i], label=λ; styl...)
     end
     plt
 end
