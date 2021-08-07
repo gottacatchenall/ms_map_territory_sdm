@@ -71,9 +71,12 @@ species all occur in cells of the raster with a probability-value $A_{xy}$ that
 is greater than some threshold. Dare I say it, but this section may
 contain multiple integrals.
 
-
 Consider an SDM where the probability of occurrence of a species is given
-by $P(x)$ for each location $x$. Lets assume these values follow an exponential
+for each location $x$ is given by $P(x)$.
+
+TODO: clarify that this is the distribution of sampled locations ranked by they
+frequency. Its confusing because you are talking about a frequency of
+probabilities. Lets assume the frequency of values of $P(x)$ follow an exponential
 distribution, with pdf $f(x) = \lambda e^{-\lambda x}$.
 
 What is the probability that for $N$ observations of this species, that
@@ -108,6 +111,12 @@ $P(N \notin x_{\leq \epsilon}) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
 which looks like
 
 ![todo](./figures/neat.png){#fig:neato}
+
+As the mass of probability becomes more "evenly spread" across the entire
+spatial domain, the probability of all individuals being observed in locations
+with $p > \epsilon$ goes down, as there are more cells with $p \leq \epsilon$.
+
+
 
 ## Test if continuous approx of space holds for various raster sizes
 
