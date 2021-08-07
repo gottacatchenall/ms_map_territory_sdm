@@ -15,9 +15,6 @@ bibliography: [references.bib]
 > of his _Ethics (Part I)_  
 
 
-***fundamental takeaway***: species distributions must be considered as a function
-of the abundance of that species
-
 Species do not _actually_ have distributions. This may seem a radical claim,
 given the rise of species distribution modeling as both a field of study and
 imperative for ecosystem management over the last several decades. But, species
