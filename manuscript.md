@@ -57,7 +57,7 @@ of individuals of a species that exist across space.
 
 Regardless of the paradigm used to design the statistical model that associates
 occurrences with probabilities as a function of environmental conditions,
-denoting the probability of observing a species $P(A_{xy})$ is fundamentally a
+framing the probability of observing a species $P(\vec{x}_i)$  as "probability of occurrence" is fundamentally a
 _frequentist_ view of probability. A more appropriate way to view this would be
 the probability you observe an individual at a location $\vec{x}$ as conditional
 on there being $N$ total individuals of a given species across the entire
@@ -100,9 +100,8 @@ information we have previously obsserved about that particle. The story of
 Schrodinger's cat is often presented through the lens that the cat is somehow
 _both_ alive and dead at the same time--- a quintessential of the
 mind-projection fallacy as described above. The state of the external world
-cannot be assumed indeterminate for the sole reason that we lack the
-information to fully describe it.
-
+cannot be assumed indeterminate for the sole reason that we lack the information
+to fully describe it.
 
 Is "probability" is a fixed property of nature rather than an abstraction used
 describe what we can say about a system given a set of information? me,
@@ -110,28 +109,47 @@ personally, i don't know.
 
 # An illustration
 
-Dare I say it, but this section may contain multiple integrals.
-
-In practice, an SDM is described by an $n$x$m$ raster where the value of the
-raster at an index $(x,y)$ is here denoted $A_{xy}$.
 
 The goal in this section is to construct a figure where the x-axis is species
 abundance $N$, and the y-axis is the probability that $N$ observations of this
 species all occur in cells of the raster with a probability-value $A_{xy}$ that
-is greater than some threshold $\rho$.
-
-What is the probability that for a given observation of an individual, that this
-observation occurs in a cell with a value above some threshold $\rho$?
-
-$P(A_{xy} > \rho)$
+is greater than some threshold. Dare I say it, but this section may
+contain multiple integrals.
 
 
+Consider an SDM where the probability of occurrence of a species is given
+by $P(x)$ for each location $x$. Lets assume these values follow an exponential
+distribution, with pdf $f(x) = \lambda e^{-\lambda x}$.
 
-**Figure 1**: sandbox sdm. Simulate probability of occurrence in region with
-$p_min$. X-axis is true abundance, y-axis is probability that an individual will
-be observed in the $p_min$ region of the SDM in $G$ generations, where the
-realized locations of the $N$ individuals in generation $g$ is drawn from the
-sandbox SDM.
+What is the probability that for $N$ observations of this species, that
+all of them occur in cells above some threshold value $\epsilon$?
+
+We start by determining what the probability of a single observation happening
+_below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$. Tikz visual here.
+
+$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx $$
+
+$$\epsilon = \lambda e^{-\lambda x^\star}$$
+$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$
+
+substituting into first line, gotta do some limits now
+
+$$ P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx $$
+
+
+
+
+## Test if continuous approx of space holds for various raster sizes
+
+In this section we risk falling into the mind-projection fallacy again, as in reality, an SDM is described by a finite $n$x$m$ raster where the values of the
+raster at an index $(x,y)$ and does not "truly" follow an exponential distribution as assumed above.
+
+
+
+# An example: use real data and make and SDM, and report different maps based on simulating occurrence
+
+
+
 
 
 
