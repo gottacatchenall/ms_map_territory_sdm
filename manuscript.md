@@ -144,7 +144,7 @@ Next, we take this result and plug it back into our original question, which is
 the probability that none of $N$ observations occur below $\epsilon$ which we
 can express as
 
-$P(N > \epsilon) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
+$P(N \notin x_{\leq \epsilon}) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
 
 which looks like
 
