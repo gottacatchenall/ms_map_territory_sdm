@@ -3,77 +3,43 @@ using Plots
 using Measures
 using Distributions
 
-f(N, ϵ, λ) = begin
-    p = 1 - Float64(ϵ/λ)
+
+f(N, α)= begin
+    α > 0 || return 0
+    p = 1 - Float64(α)
     p > 0 && return p^N # conditional to deal with float instability with epsilon and low lambda
     return 0
 end 
 
 using ColorSchemes
 
-function getmat(λ;
-    abundances = [10^i for i in 0:0.001:4],
-    epsilons = [i for i in  0.00001:0.001:0.1])
+function getmat(α;
+    abundances = [i for i in 1:5000],
+    alphas = [i for i in  0.00001:0.001:0.3])
 
-    mat = zeros(length(abundances), length(epsilons))
+    mat = zeros(length(abundances), length(alphas))
     for (i,ab) in enumerate(abundances)
-        for (j, ep) in enumerate(epsilons)
-            mat[i,j] = f(ab, ep, λ)
+        for (j, alph) in enumerate(alphas)
+            mat[i,j] = f(ab, alph)
         end
     end
-    return abundances, epsilons, mat
+    return abundances, alphas, mat
 end
 
-abundances, epsilons, λ05 = getmat(10^-1)
-abundances, epsilons, λ1 = getmat(10^-3)
-abundances, epsilons, λ5 = getmat(10^-4)
-abundances, epsilons, λ10 = getmat(10^-5)
+
+abundances, alphas, mat = getmat()
 
 sch = ColorScheme([ColorSchemes.thermal[1:200]...,  convert(RGB{Float64}, colorant"white"), convert(RGB{Float64}, colorant"white")])
 
 plt005 = contourf(abundances, 
-    epsilons, λ05', 
-    title="λ=0.5",  
+    alphas, mat', 
     xlabel="number of individuals", 
-    ylabel="ϵ",
+    ylabel="α",
     lc=:white, 
     lw=0.5,
-    colorbar=:none, 
     xaxis=:log10,
     xticks=[10^0, 10, 10^2, 10^3, 10^4],
     c=cgrad(sch, rev=true), frame=:box)
-
-plt01 = contourf(abundances, epsilons, λ1', 
-    title="λ=1",  
-    xlabel="number of individuals", 
-    ylabel="ϵ",
-    lc=:white, 
-    lw=0.5,
-    colorbar=:none, 
-    xaxis=:log10,
-    xticks=[10^0, 10, 10^2, 10^3, 10^4],
-    c=cgrad(sch, rev=true), frame=:box)
-plt05 = contourf(abundances, epsilons, λ5', 
-    title="λ=5",  
-    xlabel="number of individuals", 
-    ylabel="ϵ", 
-    lc=:white, 
-    lw=0.5,
-    colorbar=:none,
-    xaxis=:log10,
-    xticks=[10^0, 10, 10^2, 10^3, 10^4],
-    c=cgrad(sch, rev=true), frame=:box)
-plt10 = contourf(abundances, epsilons, λ10',  
-    title="λ=10", 
-    xlabel="number of individuals", 
-    ylabel="ϵ",
-    lc=:white, 
-    colorbar=:none, 
-    lw=0.5,
-    xaxis=:log10,
-    xticks=[10^0, 10, 10^2, 10^3, 10^4],
-    c=cgrad(sch, rev=true), 
-    frame=:box)
 
 cb = scatter([0,0], [0,1],c=cgrad(sch, rev=true),zcolor=[0,3], ticks=:none,clims=(0,1),xlims=(1,1.1), xshowaxis=false, yshowaxis=false, label="", colorbar_title="Probability no individuals are seen in any location with p < ϵ", grid=false)
 
@@ -82,7 +48,7 @@ l =  @layout [grid(2, 2) a{0.01w}]
 
 fnt = font(20, "Roboto")
 plot(
-    plt005, plt01, plt05, plt10, cb,
+    plt005,
     layout = l,
     font=fnt,
     size=(900,900), 

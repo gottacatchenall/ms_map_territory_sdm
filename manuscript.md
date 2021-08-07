@@ -37,7 +37,7 @@ distribution $D$. Note that typically $|O| \ll |X|$, as is the reason we don't
 try to measure the location every individual in the first place (that being
 said, for charismatic megafauna that are nearly extinct, this _is_ what we do,
 precisely because it is feasible). Yet this should not be mistaken for the
-distribution $D$ being a latent property of species.
+distribution $D$ being an inherent but latent "property" of species.
 
 Many approaches have been taken to design SDMs, but almost universally the
 output of an SDM is a raster, where the value of each location/cell $i$, denoted
@@ -62,6 +62,8 @@ entire spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a
 
 # An illustration
 
+What is the value for which $p(x)$ is non-zero,
+but _effectively_ $0$?
 
 The goal in this section is to determine how the abundance of a species is $N$
 effects the meaning of the occurrence probability
