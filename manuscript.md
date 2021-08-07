@@ -133,14 +133,22 @@ $$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx$$ {#eq:1}
 
 $$\epsilon = \lambda e^{-\lambda x^\star}$$ {#eq:2}
 
-$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$ {#eq:3}
+$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$
 
-substituting into first line, gotta do some limits now
+substituting into first line, this cosmic gumbo now reduces to
 
-$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx$$
+$$P(O < \epsilon) = \frac{\epsilon}{\lambda}$$
 
 
+Next, we take this result and plug it back into our original question, which is
+the probability that none of $N$ observations occur below $\epsilon$ which we
+can express as
 
+$P(N > \epsilon) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
+
+which looks like
+
+![todo](./figures/cool.png){#fig:neato}
 
 ## Test if continuous approx of space holds for various raster sizes
 
