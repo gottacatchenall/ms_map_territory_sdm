@@ -24,7 +24,7 @@ organism of a particular species at a particular time is an observable value,
 which we could feasibly write down. In most cases the number of individuals of a
 species becomes large enough that this is no longer practical.
 
-A species distribution is not some inherent property of a given species, but a
+A distribution is not some inherent property of a given species, but a
 conceptual framework that we invoke because we know that sampling of species
 locations is incomplete, and in most contexts these location of the individuals
 observed in this sample will change as species move after they are observed. The
