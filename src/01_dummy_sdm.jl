@@ -12,7 +12,7 @@ end
 using ColorSchemes
 
 function getmat(λ;
-    abundances = [10^i for i in 0:0.001:4],
+    abundances = [10^i for i in 0:0.001:6],
     epsilons = [i for i in  0.001:0.001:1])
 
     mat = zeros(length(abundances), length(epsilons))
@@ -36,7 +36,6 @@ plt005 = contourf(abundances,
     title="λ=0.5",  
     xlabel="number of individuals", 
     ylabel="ϵ",
-    labelfontsize=16,
     lc=:white, 
     lw=0.5,
     colorbar=:none, 
@@ -49,7 +48,6 @@ plt01 = contourf(abundances, epsilons, λ1',
     ylabel="ϵ",
     lc=:white, 
     lw=0.5,
-    labelfontsize=16,
     colorbar=:none, 
     xaxis=:log10,
     c=cgrad(csch, rev=true), frame=:box)
@@ -60,7 +58,6 @@ plt05 = contourf(abundances, epsilons, λ5',
     lc=:white, 
     lw=0.5,
     colorbar=:none,
-    labelfontsize=16, 
     xaxis=:log10,
     c=cgrad(csch, rev=true), frame=:box)
 plt10 = contourf(abundances, epsilons, λ10',  
@@ -90,3 +87,20 @@ plot(
 
 
 savefig("neat.png")
+ 
+
+l = 100
+abundances, epsilons, mat = getmat(l)
+contourf(abundances, epsilons, mat,  
+    title="λ=$l", 
+    xlabel="number of individuals", 
+    ylabel="ϵ",
+    lc=:white, 
+    colorbar=:none, 
+    lw=0.5,
+    xaxis=:log10,
+    c=cgrad(csch, rev=true), 
+    frame=:box)
+
+
+heatmap(mat)

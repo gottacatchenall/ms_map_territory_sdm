@@ -81,7 +81,7 @@ species, that all of them occur in cells above some threshold value $\epsilon$?
 
 We start by determining what the probability of a single observation happening _below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$. Then
 
-$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx\end{equation}$$
+$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx$$
 
 From this we see $\epsilon = \lambda e^{-\lambda x^\star}$ which implies
 
