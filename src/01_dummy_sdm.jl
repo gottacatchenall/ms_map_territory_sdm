@@ -74,7 +74,7 @@ plt10 = contourf(abundances, epsilons, λ10',
     c=cgrad(csch, rev=true), 
     frame=:box)
 
-cb = scatter([0,0], [0,1],c=cgrad(csch),zcolor=[0,3], ticks=:none,clims=(0,1),xlims=(1,1.1), xshowaxis=false, yshowaxis=false, label="", colorbar_title="Probability no individuals are seen in any location with p < ϵ", grid=false)
+cb = scatter([0,0], [0,1],c=cgrad(csch, rev=true),zcolor=[0,3], ticks=:none,clims=(0,1),xlims=(1,1.1), xshowaxis=false, yshowaxis=false, label="", colorbar_title="Probability no individuals are seen in any location with p < ϵ", grid=false)
 
 using Measures
 l =  @layout [grid(2, 2) a{0.01w}]

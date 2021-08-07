@@ -71,26 +71,17 @@ species all occur in cells of the raster with a probability-value $A_{xy}$ that
 is greater than some threshold. Dare I say it, but this section may
 contain multiple integrals.
 
-Consider an SDM where the probability of occurrence of a species is given
-for each location $x$ is given by $P(x)$.
-
-TODO: clarify that this is the distribution of sampled locations ranked by they
-frequency. Its confusing because you are talking about a frequency of
-probabilities. Lets assume the frequency of values of $P(x)$ follow an exponential
-distribution, with pdf $f(x) = \lambda e^{-\lambda x}$.
-
-What is the probability that for $N$ observations of this species, that
-all of them occur in cells above some threshold value $\epsilon$?
-
-We start by determining what the probability of a single observation happening
-_below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$. Then
-
-
-$$\begin{equation}P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx\end{equation}$$
-
-
+Consider an SDM where the probability of occurrence of a species is given for
+each location $x$ is given by $P(x)$. Assume the rank-frequency distribution
+values of $P(x)$ follow an exponential distribution, with pdf $f(x) = \lambda
+e^{-\lambda x}$. What is the probability that for $N$ observations of this
+species, that all of them occur in cells above some threshold value $\epsilon$?
 
 ![todo](./figures/probdensity.png){#fig:density}
+
+We start by determining what the probability of a single observation happening _below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$. Then
+
+$$\begin{equation}P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx\end{equation}$$
 
 From this we see $\epsilon = \lambda e^{-\lambda x^\star}$ which implies
 
