@@ -107,7 +107,7 @@ $P(N \notin x_{\leq \epsilon}) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
 
 which looks like
 
-![todo](./figures/cool.png){#fig:neato}
+![todo](./figures/neat.png){#fig:neato}
 
 ## Test if continuous approx of space holds for various raster sizes
 
