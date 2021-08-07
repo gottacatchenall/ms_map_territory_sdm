@@ -125,7 +125,9 @@ What is the probability that for $N$ observations of this species, that
 all of them occur in cells above some threshold value $\epsilon$?
 
 We start by determining what the probability of a single observation happening
-_below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$. Tikz visual here.
+_below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$.
+
+![todo](./figures/probdensity.png){#fig:density}
 
 $$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx$$ {#eq:1}
 
