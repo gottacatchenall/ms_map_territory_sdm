@@ -59,7 +59,7 @@ f(N, ϵ, λ) = (1.0 - (ϵ/λ))^N
 
 
 function buildscatter(ϵ, λ; 
-    Ns=[10^i for i in 1:0.1:4])
+    Ns=[10^i for i in 0:0.1:4])
     return Ns, map(N -> f(N, ϵ, λ), Ns)
 end
 
@@ -69,7 +69,7 @@ using ColorSchemes
 
 function makeplot(ϵ; cs=ColorSchemes.Paired_5)
 
-    plt = plot(title="ϵ = $ϵ",  legend=:none, dpi=300, frame=:box)
+    plt = plot(title="ϵ = $ϵ", xlims=(1,10^4),ylims=(0,1), legend=:none, dpi=300, frame=:box)
 
     styl = (ms=5, msw=1.5, mc=:white, lw=1.5)
     for (i,λ) in  enumerate([0.5, 1, 3, 5])

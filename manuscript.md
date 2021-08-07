@@ -64,6 +64,66 @@ on there being $N$ total individuals of a given species across the entire
 spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a "sandbox"
 SDM in the next section.
 
+
+# An illustration
+
+
+The goal in this section is to construct a figure where the x-axis is species
+abundance $N$, and the y-axis is the probability that $N$ observations of this
+species all occur in cells of the raster with a probability-value $A_{xy}$ that
+is greater than some threshold. Dare I say it, but this section may
+contain multiple integrals.
+
+
+Consider an SDM where the probability of occurrence of a species is given
+by $P(x)$ for each location $x$. Lets assume these values follow an exponential
+distribution, with pdf $f(x) = \lambda e^{-\lambda x}$.
+
+What is the probability that for $N$ observations of this species, that
+all of them occur in cells above some threshold value $\epsilon$?
+
+We start by determining what the probability of a single observation happening
+_below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$. Then
+
+$$\begin{equation}P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx\end{equation}$$
+
+![todo](./figures/probdensity.png){#fig:density}
+
+From this we see $\epsilon = \lambda e^{-\lambda x^\star}$ which implies
+
+$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$
+
+substituting into first line and integrating, because the exponential
+distribution is nice this cosmic gumbo now reduces to
+
+$$P(O < \epsilon) = \frac{\epsilon}{\lambda}$$
+
+
+Next, we take this result and plug it back into our original question, which is
+the probability that none of $N$ observations occur below $\epsilon$ which we
+can express as
+
+$P(N \notin x_{\leq \epsilon}) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
+
+which looks like
+
+![todo](./figures/cool.png){#fig:neato}
+
+## Test if continuous approx of space holds for various raster sizes
+
+In this section we risk falling into the mind-projection fallacy again, as in
+reality, an SDM is described by a finite $n$x$m$ raster where the values of the
+raster at an index $(x,y)$ and does not "truly" follow an exponential
+distribution as assumed above.
+
+
+# An example: use real data and make and SDM, and report different maps based on simulating occurrence
+
+
+
+# Conc
+
+
 Jaynes on the mind-projection fallacy:
 
 >  In studying probability theory, it was vaguely troubling to see reference to
@@ -106,63 +166,6 @@ to fully describe it.
 Is "probability" is a fixed property of nature rather than an abstraction used
 describe what we can say about a system given a set of information? me,
 personally, i don't know.
-
-# An illustration
-
-
-The goal in this section is to construct a figure where the x-axis is species
-abundance $N$, and the y-axis is the probability that $N$ observations of this
-species all occur in cells of the raster with a probability-value $A_{xy}$ that
-is greater than some threshold. Dare I say it, but this section may
-contain multiple integrals.
-
-
-Consider an SDM where the probability of occurrence of a species is given
-by $P(x)$ for each location $x$. Lets assume these values follow an exponential
-distribution, with pdf $f(x) = \lambda e^{-\lambda x}$.
-
-What is the probability that for $N$ observations of this species, that
-all of them occur in cells above some threshold value $\epsilon$?
-
-We start by determining what the probability of a single observation happening
-_below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$.
-
-![todo](./figures/probdensity.png){#fig:density}
-
-$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx$$ {#eq:1}
-
-$$\epsilon = \lambda e^{-\lambda x^\star}$$ {#eq:2}
-
-$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$
-
-substituting into first line, this cosmic gumbo now reduces to
-
-$$P(O < \epsilon) = \frac{\epsilon}{\lambda}$$
-
-
-Next, we take this result and plug it back into our original question, which is
-the probability that none of $N$ observations occur below $\epsilon$ which we
-can express as
-
-$P(N \notin x_{\leq \epsilon}) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
-
-which looks like
-
-![todo](./figures/cool.png){#fig:neato}
-
-## Test if continuous approx of space holds for various raster sizes
-
-In this section we risk falling into the mind-projection fallacy again, as in reality, an SDM is described by a finite $n$x$m$ raster where the values of the
-raster at an index $(x,y)$ and does not "truly" follow an exponential distribution as assumed above.
-
-
-
-# An example: use real data and make and SDM, and report different maps based on simulating occurrence
-
-
-
-
-
 
 
 
