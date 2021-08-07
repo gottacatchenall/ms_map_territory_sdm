@@ -127,14 +127,15 @@ all of them occur in cells above some threshold value $\epsilon$?
 We start by determining what the probability of a single observation happening
 _below_ $\epsilon$. Assume $O \sim \text{Exp}(\lambda)$. Tikz visual here.
 
-$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx $$
+$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx$$ {#eq:1}
 
-$$\epsilon = \lambda e^{-\lambda x^\star}$$
-$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$
+$$\epsilon = \lambda e^{-\lambda x^\star}$$ {#eq:2}
+
+$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$ {#eq:3}
 
 substituting into first line, gotta do some limits now
 
-$$ P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx $$
+$$P(O < \epsilon) = \int_{x^\star}^\infty f(x) dx$$
 
 
 
