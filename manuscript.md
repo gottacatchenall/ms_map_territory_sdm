@@ -53,7 +53,10 @@ species that exist across space. Regardless of the paradigm used to design the
 model predicting occurrence probability, the framing of _occurrence probability_
 as existing per unit space is fundamentally a _frequentist_ view of probability,
 as this does not consider that a finite number of samples from this spatial
-distribution are unlikely to produce . A more appropriate way to view this would
+distribution are unlikely to produce, and instead imposes the idea of a "long-run"
+probability of occurrences.
+
+. A more appropriate way to view this would
 be the probability you observe an individual at a location $\vec{x}$ as
 conditional on there being $N$ total individuals of a given species across the
 entire spatial domain,  $p = P(\vec{x} | N)$--- we illustrate this using a
@@ -98,7 +101,7 @@ Next, we take this result and plug it back into our original question, which is
 the probability that none of $N$ observations occur below $\epsilon$ which we
 can express as
 
-$P(N \notin x_{\leq \epsilon}) = \bigg(1 - \frac{\epsilon}{\lambda}\bigg)^N$
+$\text{Beroulli}\big(N, (1 - \frac{\epsilon}{\lambda})^N\big)$
 
 which looks like
 
