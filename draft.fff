@@ -1,0 +1,16 @@
+\begin{figure}
+\hypertarget{fig:density}{%
+\centering
+\includegraphics{./figures/probdensity.png}
+\caption{todo}\label{fig:density}
+}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\hypertarget{fig:neato}{%
+\centering
+\includegraphics{./figures/neat.png}
+\caption{todo}\label{fig:neato}
+}
+\end{figure}

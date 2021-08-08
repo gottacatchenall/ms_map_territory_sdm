@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The SDM is not the territory: species distribution models must account for finite abundances</title>
+    <script src="https://hypothes.is/embed.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+        :root {
+            --citation: #4F7294;
+            --structure: #31679c;
+
+            --light: #474747;
+            --pale: #a5a5a5;
+            --grey: #e0e0e0;
+            --nav: #fdfdfd;
+
+            --width: 650px;
+            --inner-space: 1.2em;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 0 0;
+            padding: 0 0;
+        }
+
+        article > p {
+            line-height: 1.5em;
+            padding: 10px 0px;
+            font-size: 1.1em;
+            margin: 0px auto;
+        }
+        article > h1 {
+            padding-top: 2.5em;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid var(--structure);
+        }
+        a:hover {
+            font-weight: 500;
+        }
+        .citation {
+            color: var(--citation);
+        }
+        .container {
+            margin: 0em auto;
+            padding: var(--inner-space);
+        }
+        header > .container {
+            margin-top: 4em;
+        }
+        code, pre {
+            font-family: "Roboto Mono", monospace;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .header--title {
+            font-weight: 600;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .header--authors > span {
+            color: var(--light);
+            font-weight: 400;
+        }
+        main {
+            padding-bottom: 8em !important;
+        }
+        footer {
+            background-color: var(--grey);
+            font-weight: 300;
+        }
+
+
+
+        /* max width stuff here */
+        .abstract {
+            color: var(--light);
+            margin: 0em auto;
+            font-size: 0.8em;
+            max-width: 700px;
+        }
+        .abstract p{
+            max-width: 500px;
+        }
+        figure {
+            max-width: 1200px;
+            border: 1px solid var(--pale);
+            border-radius: 2px;
+            margin: 30px auto;
+        }
+        header {
+            font-family: "Roboto", sans-serif;
+            z-index: 5;
+            color: black;
+            margin: 4rem auto 0rem auto;
+            max-width: 700px;
+        }
+        article p{
+            max-width: 700px;
+        }
+        h1, h2, h3 {
+            margin: 10px auto;
+            color: var(--structure);
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            max-width: 700px;
+        }
+        blockquote {
+            font-style: italic;
+            padding: 3px 0px 3px 30px;
+            border-left: 3px solid #404040;
+            margin: 25px auto;
+            font-size: 0.85em;
+            max-width: 500px;
+        }
+        #refs {
+            font-size: 90%;
+            column-count: 2;
+            max-width: 700px;
+            margin: 0px auto;
+        }
+        #refs > .csl-entry {
+            padding-bottom: 0.2em;
+            padding-top: 0.4em;
+            max-width: 500px;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0em auto;
+        }
+        figure > figcaption {
+            padding: var(--inner-space);
+        }
+        table {
+            width: 100%;
+            min-width: 100%;
+            border-collapse: collapse;
+        }
+        table > caption {
+            padding: var(--inner-space);
+        }
+        figcaption, caption {
+            color: var(--light);
+            font-weight: 300;
+        }
+        thead {
+            color: var(--structure);
+        }
+        td, th {
+            padding: 3px;
+        }
+        tr {
+            border-top: 1px solid var(--structure);
+            border-bottom: 1px solid var(--structure);
+        }
+        tbody > tr:nth-child(even) {background: var(--grey)};
+        tbody {
+            border-bottom: 1px solid var(--structure);
+        }
+
+
+        .hanging-indent > .csl-entry {
+            padding-left: 50px ;
+            text-indent: -45px ;
+        }
+
+
+        h1 {
+            font-size: 2.3em;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 1.7em;
+            font-weight: 400;
+        }
+        h3 {
+            font-size: 1.8em;
+        }
+        h4 {
+            font-size: 1.5em;
+        }    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+    integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+    integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+    crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF"
+    crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false }
+                ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+            <div class="header--title">The SDM is not the territory: species distribution models must account for finite abundances</div>
+            <div class="header--authors">
+                                <span class="header--author">
+                                        <a href="https://orcid.org/0000-0002-6506-6487" target="_blank">
+                        M.D. Catchen
+                    </a>
+                                                                <sup class="affilcode">1</sup>
+                                            <sup class="affilcode">2</sup>
+                                    </span>
+                        </div>
+    </header>
+
+    <main class="container">
+        <section class="abstract">
+            <b>Abstract:</b> <p>A representation of a thing is not the same as that thing.</p><br />
+            <div class="artifacts">
+                <a href="draft.pdf" title="Draft PDF" target="_blank">draft</a>
+                <a href="preprint.pdf" title="Preprint PDF" target="_blank">preprint</a>
+            </div>
+        </section>
+
+        <article>
+            <blockquote>
+            <p>Nature does not prepare distributions, only states.</p>
+            <p>ET Jaynes</p>
+            </blockquote>
+            <blockquote>
+            <p>I would warn you that I do not attribute to nature either beauty or deformity, order or confusion. Only in relation to our imagination can things be called beautiful or ugly, well-ordered or confused</p>
+            <p>a common misquote of <em>Baruch Spinoza</em>, assembled from translated parts of his <em>Ethics (Part I)</em></p>
+            </blockquote>
+            <p>Species do not <em>actually</em> have distributions. This may seem a radical claim, given the rise of species distribution modeling as both a field of study and imperative for ecosystem management over the last several decades. But consider that species are composed of discrete objects—individual organisms that occupy points in space and which move through time. The location of every individual organism of a particular species at a particular time is an observable value, which we could feasibly write down. In most cases the number of individuals of a species becomes large enough that this is no longer practical.</p>
+            <p>A distribution is not some inherent property of a given species, but a conceptual framework that we invoke because we know that sampling of species locations is incomplete, and in most contexts these location of the individuals observed in this sample will change as species move after they are observed. The goal of a species distribution model (SDM) is instead to take a set of coordinates of observed occurrence of a species <span class="math inline"><strong>O</strong> = {<em>o⃗</em><sub>1</sub>, <em>o⃗</em><sub>2</sub>, …}</span> and to best describe a distribution <span class="math inline"><em>D</em></span> such that the true coordinates of the individuals of that species, denoted <span class="math inline"><strong>X</strong> = {<em>x⃗</em><sub>1</sub>, <em>x⃗</em><sub>2</sub>, …}</span> are likely to have been drawn from this distribution <span class="math inline"><em>D</em></span>. Note that typically <span class="math inline">|<em>O</em>| ≪ |<em>X</em>|</span>, as is the reason we don’t try to measure the location every individual in the first place (that being said, for charismatic megafauna that are nearly extinct, this <em>is</em> what we do, precisely because it is feasible). Yet this should not be mistaken for the distribution <span class="math inline"><em>D</em></span> being an inherent but latent “property” of species.</p>
+            <p>Many approaches have been taken to design SDMs, but almost universally the output of an SDM is a raster, where the value of each location/cell <span class="math inline"><em>i</em></span>, denoted <span class="math inline"><em>p</em><sub><em>i</em></sub></span>, forms a distribution as <span class="math inline">∑<sub><em>i</em></sub><em>p</em>(<em>i</em>) = 1</span>. The value of a cell is often referred to in plain language as “occurrence probability.” But what is meant by this?—is it the probability conditional on observing an individual that it will be observed at that location? Or is it the probability that an observer would find an individual of this species at location if they “look hard enough?”</p>
+            <p>This semantic confusion is a by-product of using a distribution as a tool to model something that is discrete — the finite number of individuals of a species that exist across space. Regardless of the paradigm used to design the model predicting occurrence probability, the framing of <em>occurrence probability</em> as existing per unit space is fundamentally a <em>frequentist</em> view of probability, as this does not consider that a finite number of samples from this spatial distribution are unlikely to produce, and instead imposes the idea of a “long-run” probability of occurrences.</p>
+            <p>. A more appropriate way to view this would be the probability you observe an individual at a location <span class="math inline"><em>x⃗</em></span> as conditional on there being <span class="math inline"><em>N</em></span> total individuals of a given species across the entire spatial domain, <span class="math inline"><em>p</em> = <em>P</em>(<em>x⃗</em>|<em>N</em>)</span>— we illustrate this using a “sandbox” SDM in the next section.</p>
+            <h1 id="an-illustration">An illustration</h1>
+            <p>What is the value for which <span class="math inline"><em>p</em>(<em>x</em>)</span> is non-zero, but <em>effectively</em> <span class="math inline">0</span>?</p>
+            <p>The goal in this section is to determine how the abundance of a species is <span class="math inline"><em>N</em></span> effects the meaning of the occurrence probability</p>
+            <p>species all occur in cells of the raster with a probability-value <span class="math inline"><em>A</em><sub><em>x</em><em>y</em></sub></span> that is greater than some threshold. Dare I say it, but this section may contain multiple integrals.</p>
+            <p>Consider an SDM where the probability of occurrence of a species is given for each location <span class="math inline"><em>x</em></span> is given by <span class="math inline"><em>P</em>(<em>x</em>)</span>. Assume the rank-frequency distribution values of <span class="math inline"><em>P</em>(<em>x</em>)</span> follow an exponential distribution, with pdf <span class="math inline"><em>f</em>(<em>x</em>) = <em>λ</em><em>e</em><sup> − <em>λ</em><em>x</em></sup></span>. What is the probability that for <span class="math inline"><em>N</em></span> observations of this species, that all of them occur in cells above some threshold value <span class="math inline"><em>ϵ</em></span>?</p>
+            <figure>
+            <img src="./figures/probdensity.png" id="fig:density" alt="Figure 1: todo" /><figcaption aria-hidden="true">Figure 1: todo</figcaption>
+            </figure>
+            <p>We start by determining what the probability of a single observation happening <em>below</em> <span class="math inline"><em>ϵ</em></span>. Assume <span class="math inline"><em>O</em> ∼ Exp(<em>λ</em>)</span>. Then</p>
+            <p><span class="math display"><em>P</em>(<em>O</em> &lt; <em>ϵ</em>) = ∫<sub><em>x</em><sup>⋆</sup></sub><sup>∞</sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span></p>
+            <p>From this we see <span class="math inline"><em>ϵ</em> = <em>λ</em><em>e</em><sup> − <em>λ</em><em>x</em><sup>⋆</sup></sup></span> which implies</p>
+            <p><span class="math display">$$\implies x^\star = \frac{1}{\lambda}\ln \bigg(\frac{\lambda}{\epsilon} \bigg)$$</span></p>
+            <p>substituting into first line and integrating, because the exponential distribution is nice this cosmic gumbo now reduces to</p>
+            <p><span class="math display">$$P(O &lt; \epsilon) = \frac{\epsilon}{\lambda}$$</span></p>
+            <p>Next, we take this result and plug it back into our original question, which is the probability that none of <span class="math inline"><em>N</em></span> observations occur below <span class="math inline"><em>ϵ</em></span> which we can express as</p>
+            <p><span class="math inline">$\text{Beroulli}\big(N, (1 - \frac{\epsilon}{\lambda})^N\big)$</span></p>
+            <p>which looks like</p>
+            <figure>
+            <img src="./figures/neat.png" id="fig:neato" alt="Figure 2: todo" /><figcaption aria-hidden="true">Figure 2: todo</figcaption>
+            </figure>
+            <p>As the mass of probability becomes more “evenly spread” across the entire spatial domain, the probability of all individuals being observed in locations with <span class="math inline"><em>p</em> &gt; <em>ϵ</em></span> goes down, as there are more cells with <span class="math inline"><em>p</em> ≤ <em>ϵ</em></span>.</p>
+            <h2 id="test-if-continuous-approx-of-space-holds-for-various-raster-sizes">Test if continuous approx of space holds for various raster sizes</h2>
+            <p>In this section we risk falling into the mind-projection fallacy again, as in reality, an SDM is described by a finite <span class="math inline"><em>n</em></span>x<span class="math inline"><em>m</em></span> raster where the values of the raster at an index <span class="math inline">(<em>x</em>, <em>y</em>)</span> and does not “truly” follow an exponential distribution as assumed above.</p>
+            <h1 id="an-example-use-real-data-and-make-and-sdm-and-report-different-maps-based-on-simulating-occurrence">An example: use real data and make and SDM, and report different maps based on simulating occurrence</h1>
+            <h1 id="conc">Conc</h1>
+            <p>Jaynes on the mind-projection fallacy:</p>
+            <blockquote>
+            <p>In studying probability theory, it was vaguely troubling to see reference to “Gaussian random variables,” or “stochastic processes,” or “stationary time-series,” or “disorder,” as if the property of being Gaussian, random, stochastic, stationary, or disorderly is a real property, like the property of possessing mass or length, existing in Nature… As soon as the error had a definite name and description, it was much easier to recognize. Once one has grasped the idea, one sees the Mind Projection Fallacy everywhere; what we have been taught as deep wisdom, is stripped of its pretensions and seen to be instead a foolish non sequitur. The error occurs in two complementary forms, which we might indicate thus:</p>
+            <p>A): My own imagination -&gt; Real property of Nature</p>
+            <p>B): My own ignorance -&gt; Nature is indeterminate</p>
+            </blockquote>
+            <p>“Our own ignorance implies nature is indeterminate.” This is why we build SDMs. Clearly the locations of the individuals of a species at any point in time is a measurable property of the world for which there cannot be more than one realized value. But we cannot sample this entire thing, so we take a subset of it and aim to estimate the this latent “species distribution” in order to predict where one might observe a species.</p>
+            <p>This pattern is common in the history of science. To develop on an example raised by Jaynes—quantum mechanics has an object that much like a species distribution model: the wave function <span class="math inline"><em>ψ</em></span> describing the probability of observing a particle across space. A misinterpretation of the wave function, according to Jaynes, is that often one assumes that the distribution of where observers see a particle is an inherent property of that particle, rather than being a construct of human imagination created to make predictions based on the information we have observed about that particle. The most (in)famous example of this is likely Schrodinger’s cat: often presented as the lens that the cat is somehow <em>both</em> alive and dead at the same time— a quintessential of the mind-projection fallacy as described above. The state of the external world cannot be assumed indeterminate for the sole reason that we lack the information to fully describe it. This is equivalent to saying if one is in New York, then for oneself London becomes a multiverse of the possible worlds which are only realized upon one’s return.</p>
+            <p>Is “probability” is a fixed property of nature rather than an abstraction used describe what we can say about a system given a set of information? me, personally, i don’t know.</p>
+            <h1 id="references">References</h1>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h2>Affiliations</h2>
+            <sup>1</sup>&nbsp;McGill University; <sup>2</sup>&nbsp;Québec Centre for Biodiversity Sciences
+            <br />
+            
+        </div>
+    </footer>
+
+</body>
+</html>
